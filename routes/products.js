@@ -3,8 +3,8 @@ const router = express.Router();
 const {database} = require('../config/helper');
 /* GET home page. */
 router.get('/', function (req, res) {
-  let page = (res.query.page !== undefined && res.query.page !== 0) ? res.query.page : 1; // Set the current page number. default 1
-  let limit = (res.query.limit !== undefined && res.query.limit !== 0) ? res.query.limit : 10; // Set the limit of items per page. default 10
+  let page = (req.query.page !== undefined && req.query.page !== 0) ? req.query.page : 1; // Set the current page number. default 1
+  let limit = (req.query.limit !== undefined && req.query.limit !== 0) ? req.query.limit : 10; // Set the limit of items per page. default 10
 
 
   let startValue = 0;

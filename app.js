@@ -24,8 +24,8 @@ const usersRoute = require('./routes/users');
 
 
 /* Using routes */
-app.use('api/products', productsRoute);
-app.use('api/users', usersRoute);
+app.use('/api/products', productsRoute);
+app.use('/api/users', usersRoute);
 
 
 module.exports = app;
